@@ -30,6 +30,30 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#Devise for security
+gem 'devise'
+
+# Install omniauth -  for facebook and twitter
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+
+# Add mini Magik for image editing
+gem "mini_magick"
+
+# Add Fog for S3 upload
+gem "fog-aws"
+
+# Bootstrap 4
+gem 'bootstrap', '~> 4.0.0.beta'
+
+# Add in JQuery
+gem 'jquery-rails'
+
+# Simple form
+gem 'simple_form'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -39,6 +63,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # User Faker for seeding data
+  gem 'faker'
 end
 
 group :development do

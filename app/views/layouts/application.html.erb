@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hhhk</title>
+    <title>Happy Hour Hong Kong</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,23 @@
   </head>
 
   <body>
+
+    <nav class="navbar fixed-top navbar-dark bg-invert justify-content-center">
+      <a class="navbar-brand" href="/">Happy Hour Hong Kong</a>
+    </nav>
+
+    <%- flash.each do |k, v| %>
+    <div class="container below-nav">
+      <div class="row"><div class="col">
+        <div class="<%= k %>"><%= v %></div>
+     </div>
+   </div>
+    <% end %>
+
+    <div class="below-nav">
     <%= yield %>
+    </div>
+
+    </div>
   </body>
 </html>

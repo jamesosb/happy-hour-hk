@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vtype: MyString
+  region: MyString
+  name: MyString
+  desc: MyText
+  exists: false
+  latitude: 
+  latitude: 
+  longitude: 
+  longitude: 
+
+two:
+  vtype: MyString
+  region: MyString
+  name: MyString
+  desc: MyText
+  exists: false
+  latitude: 
+  latitude: 
+  longitude: 
+  longitude: 

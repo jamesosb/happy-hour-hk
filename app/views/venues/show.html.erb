@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vtype:</strong>
+  <%= @venue.vtype %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @venue.region %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @venue.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @venue.desc %>
+</p>
+
+<p>
+  <strong>Exists:</strong>
+  <%= @venue.exists %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @venue.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @venue.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_venue_path(@venue) %> |
+<%= link_to 'Back', venues_path %>
