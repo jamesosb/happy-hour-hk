@@ -1,23 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  vtype: MyString
-  region: MyString
-  name: MyString
-  desc: MyText
-  exists: false
-  latitude: 
-  latitude: 
-  longitude: 
-  longitude: 
+  vtype: Date Night
+  region: Wan Chai
+  name: Simonis LLC
+  desc: Quos consequatur est similique.
+  exists: true
+  latitude: -57.510779884443
+  longitude: 36.0957077771355
 
 two:
-  vtype: MyString
-  region: MyString
-  name: MyString
-  desc: MyText
-  exists: false
-  latitude: 
-  latitude: 
-  longitude: 
-  longitude: 
+  vtype: Watching Sports
+  region: Wan Chai
+  name: Harvey, Moore and Wiza
+  desc: Laudantium enim sint et commodi impedit porro fugit dolor.
+  exists: true
+  latitude: 75.6072903247038
+  longitude: 96.6087779802299

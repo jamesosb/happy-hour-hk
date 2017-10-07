@@ -65,6 +65,10 @@ group :development, :test do
   gem 'selenium-webdriver'
   # User Faker for seeding data
   gem 'faker'
+  # Use guard to run tests every time code has changed
+  gem 'guard' # NOTE: this is necessary in newer versions
+  gem 'guard-minitest'
+
 end
 
 group :development do

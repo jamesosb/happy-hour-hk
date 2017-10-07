@@ -17,7 +17,7 @@ class VenuesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create venue" do
     assert_difference('Venue.count') do
-      post venues_url, params: { venue: { desc: @venue.desc, exists: @venue.exists, latitude: @venue.latitude, latitude: @venue.latitude, longitude: @venue.longitude, longitude: @venue.longitude, name: @venue.name, region: @venue.region, vtype: @venue.vtype } }
+      post venues_url, params: { venue: { desc: @venue.desc, exists: @venue.exists, latitude: @venue.latitude, longitude: @venue.longitude, name: @venue.name, region: @venue.region, vtype: @venue.vtype } }
     end
 
     assert_redirected_to venue_url(Venue.last)
@@ -34,7 +34,7 @@ class VenuesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update venue" do
-    patch venue_url(@venue), params: { venue: { desc: @venue.desc, exists: @venue.exists, latitude: @venue.latitude, latitude: @venue.latitude, longitude: @venue.longitude, longitude: @venue.longitude, name: @venue.name, region: @venue.region, vtype: @venue.vtype } }
+    patch venue_url(@venue), params: { venue: { desc: @venue.desc, exists: @venue.exists, latitude: @venue.latitude, longitude: @venue.longitude, name: @venue.name, region: @venue.region, vtype: @venue.vtype } }
     assert_redirected_to venue_url(@venue)
   end
 
