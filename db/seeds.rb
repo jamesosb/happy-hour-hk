@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-5.times do
+10.times do
 
 Venue.create(
-vtype: 'Date Night',
-region: 'Wan Chai',
+vtype: ['Date Night','Watching Sports','After Work Drinks', 'Dancing and Drinking'].sample,
+region: ['Wan Chai','TST','Central'].sample,
 name: Faker::Company.name,
 desc: Faker::Lorem.sentence,
 exists: '1',
@@ -20,46 +20,25 @@ longitude: Faker::Address.longitude
 
 end
 
-5.times do
+50.times do |n|
 
-  Venue.create(
-  vtype: 'Watching Sports',
-  region: 'Wan Chai',
-  name: Faker::Company.name,
-  desc: Faker::Lorem.sentence,
-  exists: '1',
-  latitude: Faker::Address.latitude,
-  longitude:Faker::Address.longitude
-  )
+@starttime = Faker::Time.forward(23, :evening)
 
-end
+newoffer = Offer.create(
+start: @starttime,
+end:  @starttime + rand(2..6).hours,
+offertype: ['2-4-1','Percentage Off','Discounts'].sample,
+desc: Faker::Lorem.sentence,
 
+)
 
-5.times do
+@numberofvenues = Venue.count
 
-  Venue.create(
-  vtype: 'After Work Drinks',
-  region: 'Central',
-  name: Faker::Company.name,
-  desc: Faker::Lorem.sentence,
-  exists: '1',
-  latitude: Faker::Address.latitude,
-  longitude:Faker::Address.longitude
-  )
+newoffer.deals.create(
+venue_id: rand(1..@numberofvenues),
+offer_id: newoffer.id
+)
 
-end
-
-
-5.times do
-
-  Venue.create(
-  vtype: 'Dancing and Drinking',
-  region: 'TST',
-  name: Faker::Company.name,
-  desc: Faker::Lorem.sentence,
-  exists: '1',
-  latitude: Faker::Address.latitude,
-  longitude:Faker::Address.longitude
-  )
+newoffer.save!
 
 end

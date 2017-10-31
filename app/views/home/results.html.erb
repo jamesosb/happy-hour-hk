@@ -1,0 +1,26 @@
+
+<%= render 'resultfilters' %>
+
+<% @results.each_with_index do |v| %>
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-sm-12">
+<div class="card green-card-header top-margin-30">
+  <div class="card-header text-center font-invert">
+    <h5><%= v.name %></h5>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Offers</h4>
+    <p class="card-text"><% v.offers.each do |o| %>
+                          <%= o.offertype %>
+                          <% end %></p>
+
+  </div>
+</div>
+</div>
+</div>
+</div>
+<% end %>
+
+
+</div>

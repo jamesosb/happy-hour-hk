@@ -3,6 +3,81 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.red-card{
+.white-card{
   background-color: #FFF;
+}
+
+.red-card{
+  background-color: #f84545;
+}
+
+.grey-card{
+  background-color: #5e696d;
+}
+
+.blue-card{
+  background-color: #02baf2;
+}
+
+.yellow-card{
+  background-color: #fad46b;
+}
+
+.yellow-card-header .card-header{
+  background-color: #fad46b;
+  border-color:#fad46b;
+}
+
+.yellow-card-header{
+  border-color:#fad46b;
+}
+
+.purple-card-header .card-header{
+  background-color:#a88cd5;
+  border-color:#a88cd5;
+}
+
+.purple-card-header{
+  border-color:#a88cd5;
+}
+
+.green-card-header .card-header{
+  background-color:#3eb5ac;
+  border-color:#3eb5ac;
+}
+
+.green-card-header{
+  border-color:#3eb5ac;
+}
+
+.padd-and-centre{
+  padding: 20px;
+  text-align: center;
+}
+
+.spacious-lineheight{
+  line-height: 2.2;
+}
+
+select.select-box{
+  border-left: 1px solid #cc0000;
+  color: #ffffff;
+  background-color: #cc0000;
+  border-color: #cc0000;
+  line-height: 2.2;
+  font-size: 1.5rem;
+}
+
+select.select-box:focus{
+  background-color: #f96a6a;
+  color: #fff;
+  border-color: #fff;
+}
+
+.top-margin-10{
+  margin-top: 10px;
+}
+
+.top-margin-30{
+  margin-top: 30px;
 }

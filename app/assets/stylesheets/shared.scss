@@ -9,6 +9,15 @@ body {
   color: #000000;
   background-color: #ffffff;
 }
+
+.font-lightweight{
+  font-weight: 200;
+}
+
+.font-invert{
+  color: #FFFFFF;
+}
+
 a {
   color: #02baf2;
   text-decoration: none;
@@ -861,4 +870,11 @@ fieldset[disabled] .btn-inverse.active {
 .jumbotron{
   background-color: #fad46b;
   min-height: 23rem;
+  margin-bottom: 0;
+}
+
+.footer{
+  background-color: #364347;
+  min-height: 15rem;
+  margin-top: 30px;
 }

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2017-10-07 11:12:53
+  end: 2017-10-07 11:12:53
+  offertype: 2-4-1
+  desc:
+
+two:
+  start: 2017-10-07 11:12:53
+  end: 2017-10-07 11:12:53
+  offertype: Percent Off
+  desc: Laudantium enim sint et commodi impedit porro fugit dolor.

@@ -1,0 +1,16 @@
+  <div class="container">
+<% @venues.each do |venue| %>
+  <tr>
+    <td><%= venue.vtype %></td>
+    <td><%= venue.region %></td>
+    <td><%= venue.name %></td>
+    <td><%= venue.desc %></td>
+    <td><%= venue.exists %></td>
+    <td><%= venue.latitude %></td>
+    <td><%= venue.longitude %></td>
+    <td><%= link_to 'Show', venue %></td>
+    <td><%= link_to 'Edit', edit_venue_path(venue) %></td>
+    <td><%= link_to 'Destroy', venue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</div>
