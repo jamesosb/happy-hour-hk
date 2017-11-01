@@ -9,7 +9,7 @@
 10.times do
 
 Venue.create(
-vtype: ['Date Night','Watching Sports','After Work Drinks', 'Dancing and Drinking'].sample,
+vtype: ['Date Night','Watching Sports','After Work Drinks', 'Dancing and Drinking',' Relaxing with Friends', 'Club Night'].sample,
 region: ['Wan Chai','TST','Central'].sample,
 name: Faker::Company.name,
 desc: Faker::Lorem.sentence,
@@ -20,7 +20,7 @@ longitude: Faker::Address.longitude
 
 end
 
-50.times do |n|
+200.times do |n|
 
 @starttime = Faker::Time.forward(23, :evening)
 

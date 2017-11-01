@@ -9,14 +9,15 @@
       <div class="row">
         <div class="col">
 
-        <h4 class="font-invert font-lightweight spacious-lineheight"> Showing
+        <h4 class="font-invert font-lightweight spacious-lineheight"> Showing <% if @results.present? %> <%= @results.count  %> venues <% end %> </h4>
 
-  <%= simple_form_for :search, html: { class: "form-inline justify-content-center" } do |f| %>
-    <%= f.error_notification %>
-    <%= f.select :what, options_for_select([['Happy Hours Anywhere','Anywhere'],['After Work Drinks','After Work Drinks'],['Somewhere to Relax with Friends', 'Relaxing with Friends'], ['A Club Night','Club Night'], ['Somewhere for Date Night','Date Night'], ['A Place to Watch Sports', 'Watching Sports']]),{} ,:class => "form-control select-box font-lightweight"  %>
-     starting
-    <%= f.select :datetime, options_for_select(dates_for_search_select.each_with_index.map{|d, i| [d[1],d[0]]}), {}, :class => "form-control select-box font-lightweight" %>
-     at
+  <%= simple_form_for :@results, url: results_path, method: :get, html: { class: "form-inline justify-content-center" } do |f| %>
+  <%= f.error_notification %>
+  <h4 class="font-invert font-lightweight spacious-lineheight">
+    <%= f.select :vtype, options_for_select([['All Happy Hours','Anywhere'],['After Work Drinks','After Work Drinks'],['Somewhere to Relax with Friends', 'Relaxing with Friends'], ['A Club Night','Club Night'], ['Somewhere for Date Night','Date Night'], ['A Place to Watch Sports', 'Watching Sports']]),{} ,:class => "form-control select-box font-lightweight"  %>
+      happening
+    <%= f.select :date, options_for_select(dates_for_search_select.each_with_index.map{|d, i| [d[1],d[0]]}), {}, :class => "form-control select-box font-lightweight" %>
+      at
     <%= f.select :time, options_for_select(times_for_search_select.each_with_index.map{|d, i| [d[1],d[0]]}), {}, :class => "form-control select-box font-lightweight" %>
  </h4>
 

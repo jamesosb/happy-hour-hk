@@ -1,31 +1,29 @@
 
-  <div class="red-card padd-and-centre">
-    <div class="container">
+<div class="red-card padd-and-centre">
+  <div class="container">
     <div class="row">
       <div class="col">
         <h2 class="text-center font-lightweight font-invert"><h2>
         </div>
       </div>
+      <%= simple_form_for :results, url: results_path, method: :get, html: { class: "form-inline justify-content-center" } do |f| %>
       <div class="row">
         <div class="col">
-
-  <%= simple_form_for :results, url: results_path, method: :get, html: { class: "form-inline justify-content-center" } do |f| %>
-    <%= f.error_notification %>
-    <h4 class="font-invert font-lightweight spacious-lineheight"> I'm looking for
-    <%= f.select :what, options_for_select([['Happy Hours Anywhere','Anywhere'],['After Work Drinks','After Work Drinks'],['Somewhere to Relax with Friends', 'Relaxing with Friends'], ['A Club Night','Club Night'], ['Somewhere for Date Night','Date Night'], ['A Place to Watch Sports', 'Watching Sports']]),{} ,:class => "form-control select-box font-lightweight"  %>
-    starting
-    <%= f.select :datetime, options_for_select(dates_for_search_select.each_with_index.map{|d, i| [d[1],d[0]]}), {}, :class => "form-control select-box font-lightweight" %>
-    at
-    <%= f.select :time, options_for_select(times_for_search_select.each_with_index.map{|d, i| [d[1],d[0]]}), {}, :class => "form-control select-box font-lightweight" %>
-  </h4>
+          <%= f.error_notification %>
+          <h4 class="font-invert font-lightweight spacious-lineheight"> I'm looking for
+            <%= f.select :vtype, options_for_select([['All Happy Hours','Anywhere'],['After Work Drinks','After Work Drinks'],['Somewhere to Relax with Friends', 'Relaxing with Friends'], ['A Club Night','Club Night'], ['Somewhere for Date Night','Date Night'], ['A Place to Watch Sports', 'Watching Sports']]),{} ,:class => "form-control select-box font-lightweight"  %>
+            happening
+            <%= f.select :date, options_for_select(dates_for_search_select.each_with_index.map{|d, i| [d[1],d[0]]}), {}, :class => "form-control select-box font-lightweight" %>
+            at
+            <%= f.select :time, options_for_select(times_for_search_select.each_with_index.map{|d, i| [d[1],d[0]]}), {}, :class => "form-control select-box font-lightweight" %>
+          </h4>
+          <div class="row">
+            <div class="col">
+              <%= f.button :submit, 'Discover', :class => 'btn btn-block btn-danger btn-embossed top-margin ' %>
+            </div>
+          </div>
+          <%end%>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <%= f.button :submit, 'Discover', :class => 'btn btn-block btn-danger btn-embossed top-margin ' %>
-            </p>
-          <%end%>
-          </div>
-        </div>
     </div>
-</div>
+  </div>
