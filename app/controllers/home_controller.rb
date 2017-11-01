@@ -19,7 +19,7 @@ class HomeController < ApplicationController
 
     else
 
-    @results = Venue.joins(:offers).where(["venues.vtype = ? DATE(offers.start) = ? and EXTRACT(hour FROM offers.end) >= ?", params[:results][:vtype], @finddate , @findtime.strftime('%H')])
+    @results = Venue.joins(:offers).where(["venues.vtype = ? and DATE(offers.start) = ? and EXTRACT(hour FROM offers.end) >= ?", params[:results][:vtype], @finddate , @findtime.strftime('%H')])
 
     end
 
@@ -36,7 +36,7 @@ class HomeController < ApplicationController
 
     else
 
-      @results = Venue.joins(:offers).where(["venues.vtype = ? DATE(offers.start) = ? and EXTRACT(hour FROM offers.end) >= ?", params[:@results][:vtype], @finddate , @findtime.strftime('%H')])
+      @results = Venue.joins(:offers).where(["venues.vtype = ? and DATE(offers.start) = ? and EXTRACT(hour FROM offers.end) >= ?", params[:@results][:vtype], @finddate , @findtime.strftime('%H')])
 
     end
 
