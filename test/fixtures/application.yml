@@ -12,5 +12,5 @@
 
 #S3 Secret Keys.
 
-S3_aws_access_key_id: "AKIAIEBDCVEQVVB4YYEA"
-S3_aws_secret_access_key: "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"
+#S3_aws_access_key_id: "AKIAIEBDCVEQVVB4YYEA"
+#S3_aws_secret_access_key: "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"
