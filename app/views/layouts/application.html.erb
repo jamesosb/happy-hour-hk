@@ -12,7 +12,13 @@
 
     <nav class="navbar fixed-top navbar-dark bg-invert justify-content-center">
       <%= link_to "Happy Hour Hong Kong", root_path, class: 'navbar-brand' %>
- 
+       <ul class=" navnavbar-nav mr-auto">
+											<li class="nav-item">
+												<a href="#fakelink">
+													<span class="fa-user fa"></span><span class="hidden">My Account</span>
+												</a>
+											</li>
+                    </ul>
     </nav>
 
     <%- flash.each do |k, v| %>
