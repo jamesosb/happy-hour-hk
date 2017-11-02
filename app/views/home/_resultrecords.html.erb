@@ -1,0 +1,58 @@
+<% @results.each_with_index do |v| %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-sm-12">
+      <div class="card green-card-header top-margin-30">
+        <div class="card-header text-center font-invert">
+          <h5><%= v.name %></h5>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6 col-sm-6"><div class="green-box text-center"><%= v.vtype %></div></div>
+            <div class="col-lg-6 col-sm-6"><div class="green-box text-center"><%= v.region %></div></div>
+          </div>
+          <p class="card-text"><% v.offers.each do |o| %>
+            <div class="offer-card">
+            <div class="row">
+              <div class="col-lg-2 col-sm-2">
+
+                <div class="offer-card-type text-center font-invert">
+                  <span class="align-middle"><%= o.offertype %></span>
+                </div>
+
+              </div>
+              <div class="col-lg-10 col-sm-10">
+                <div class="row">
+                  <div class="col-lg-12 col-sm-12">
+                <div class="offer-card-desc">
+                  <%= o.desc %>
+                </div>
+                </div>
+                </div>
+                <div class="row no-gutters ">
+                  <div class="col-lg-6 col-sm-6">
+                <div class="offer-card-modified">
+                <div class="green-box text-center">  Added <%= distance_of_time_in_words(o.updated_at, Date.today) %> ago</div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-6">
+                <div class="offer-card-times">
+                  <div class="green-box text-center">From <%= o.start.strftime("%-I : %M %p") %> until
+                  <%= o.end.strftime("%-I : %M %p") %></div>
+                </div>
+                </div>
+                </div>
+                </div>
+</div>
+            </div>
+            <% end %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>
+
+
+</div>

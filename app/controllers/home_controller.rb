@@ -11,7 +11,7 @@ class HomeController < ApplicationController
 
     elsif params.has_key?(:results)
 
-      @resultsparams = params[:results]
+       @resultsparams = params[:results]
 
     end
 
@@ -23,13 +23,14 @@ class HomeController < ApplicationController
 
     if @resultsparams[:vtype] == 'Anywhere'
 
-    @results = Venue.joins(:offers).where(["DATE(offers.start) = ? and EXTRACT(hour FROM offers.end) >= ?", @finddate , @findtime.strftime('%H')])
+    @results = Venue.joins(:offers).where(["venues.region = ? AND  DATE(offers.start) = ? and EXTRACT(hour FROM offers.end) >= ?", @resultsparams[:where], @finddate , @findtime.strftime('%H')])
 
     else
 
-    @results = Venue.joins(:offers).where(["venues.vtype = ? and DATE(offers.start) = ? and EXTRACT(hour FROM offers.end) >= ?", @resultsparams[:vtype], @finddate , @findtime.strftime('%H')])
+    @results = Venue.joins(:offers).where(["venues.region = ? AND venues.vtype = ? and DATE(offers.start) = ? and EXTRACT(hour FROM offers.end) >= ?", @resultsparams[:where] , @resultsparams[:vtype], @finddate , @findtime.strftime('%H')])
 
     end
+
 
   end
 
