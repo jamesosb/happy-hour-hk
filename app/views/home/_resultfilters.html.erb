@@ -16,11 +16,11 @@
   <h4 class="font-invert font-lightweight spacious-lineheight">
     <%= f.select :vtype, options_for_select([['All Happy Hours','Anywhere'],['Somewhere for After Work Drinks','After Work Drinks'],['Somewhere to Relax with Friends', 'Relaxing with Friends'], ['A Club Night','Club Night'], ['Somewhere for Date Night','Date Night'], ['A Place to Watch Sports', 'Watching Sports']], params.has_key?(:@results) ? params[:@results][:vtype] : params[:results][:vtype] ),{} ,:class => "form-control select-box font-lightweight"  %>
       happening
-    <%= f.select :date, options_for_select(dates_for_search_select.each_with_index.map{|d, i| [d[1],d[0]]}), {}, :class => "form-control select-box font-lightweight" %>
+    <%= f.select :date, options_for_select(dates_for_search_select.each_with_index.map{|d, i| [d[1],d[0]]}, params.has_key?(:@results) ? params[:@results][:date] : params[:results][:date]), {}, :class => "form-control select-box font-lightweight" %>
       at
-    <%= f.select :time, options_for_select(times_for_search_select.each_with_index.map{|d, i| [d[1],d[0]]}), {}, :class => "form-control select-box font-lightweight" %>
+    <%= f.select :time, options_for_select(times_for_search_select.each_with_index.map{|d, i| [d[1],d[0]]}, params.has_key?(:@results) ? params[:@results][:time] : params[:results][:time]), {}, :class => "form-control select-box font-lightweight" %>
       in
-    <%= f.select :where, options_for_select([['Wan Chai','Wan Chai'],['TST','TST'],['Central','Central']]), {}, :class => "form-control select-box font-lightweight" %>
+    <%= f.select :where, options_for_select([['Wan Chai','Wan Chai'],['TST','TST'],['Central','Central']], params.has_key?(:@results) ? params[:@results][:where] : params[:results][:where]), {}, :class => "form-control select-box font-lightweight" %>
  </h4>
 
           <%= f.button :submit, 'Discover', :class => 'btn btn-block btn-danger btn-embossed top-margin ' %>
